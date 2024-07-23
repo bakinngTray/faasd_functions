@@ -3,14 +3,14 @@ provider:
 
 functions:
   contragents:
-    lang: python
+    lang: python3
     handler: ./contragents
     image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/contragents:${TAG:-latest}
   agreement:
-    lang: python
+    lang: python3
     handler: ./agreement
     image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/agreement:${TAG:-latest}
   calculator:
-    lang: python
+    lang: python3
     handler: ./calculator
     image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/calculator:${TAG:-latest}
