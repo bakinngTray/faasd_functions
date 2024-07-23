@@ -1,0 +1,16 @@
+provider:
+  name: openfaas
+
+functions:
+  contragents:
+    lang: python
+    handler: ./contragents
+    image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/contragents:${TAG:-latest}
+  agreement:
+    lang: python
+    handler: ./agreement
+    image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/agreement:${TAG:-latest}
+  calculator:
+    lang: python
+    handler: ./calculator
+    image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/calculator:${TAG:-latest}
